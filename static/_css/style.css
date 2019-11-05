@@ -1,0 +1,260 @@
+body {
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Alvaro;
+    src: url('AlvaroFREE.ttf');
+}
+
+#nome_site {
+    color: #fff;
+    text-align: center;
+    font-size: 78px;
+    font-family: Alvaro, Arial, Tahoma, Sans-serif;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-shadow: #649214 2px -2px, #649214 -2px 2px, #649214 2px 2px, #649214 -2px -2px;
+    animation: nome_slogan 2s;
+    animation-delay: 250ms;
+}
+
+#slogan_site {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    animation: nome_slogan 2s;
+    animation-delay: 250ms;
+}
+
+@keyframes nome_slogan {
+    0% {
+        font-size: 0;
+        opacity: 0;
+    }
+    100% {
+        font-size: 100;
+        opacity: 1;
+    }
+}
+
+header {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0; 
+    background-image: url("../_img/wallpaper.png") ;
+    background-size: 100%;
+    height: 65%;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: 50px;
+}
+
+#links {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: table;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+.linha_vertical {
+    width: 0px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.link, .linha_vertical, #link_login {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+section {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 70%;
+    color: black;
+    text-align: center;
+}
+
+article {
+    text-align: center;
+}
+
+#article_dieta {
+    background-image: url("../_img/nutricao.png");
+    background-size: 100%;
+    width: 100%;
+    color: #fff;
+    height: 400px;
+}
+
+#conteudo_dieta {
+    opacity: 0;
+    transition: 1s;
+    position: absolute;
+    width: 100%;
+    left: 5%;
+}
+
+footer {
+    margin-top: 10px;
+    border-top: #649214 1px solid;
+    color: black;
+    background: #fff;
+}
+
+.p_footer {
+    float: left;
+    margin-left: 7%;
+}
+
+/* Home */ 
+
+#sobre {
+    text-indent: 4em;
+    margin: 10px;
+    margin-right: 15px; 
+    line-height: 25px;
+    text-align: justify;
+}
+
+#titulo_dieta {
+    text-shadow: rgba(126, 179, 35, 0.7) 2px -2px, rgba(126, 179, 35, 0.7) -2px 2px, rgba(126, 179, 35, 0.7) 2px 2px, rgba(126, 179, 35, 0.7) -2px -2px;
+    font-family: Alvaro, Arial, Tahoma, Sans-serif;
+    letter-spacing: 20px;
+    font-size: 75px;
+    margin: 0px;
+}
+
+#logo_dieta {
+    position: sticky;
+    border-radius: 50%;
+    border: #000 3px solid;
+    padding: 20px;
+    filter: invert(100%);
+    background-color: rgba(255, 255, 255, 0.5)
+}
+
+#criar_dieta, #ver_dieta {
+    border: #fff solid 2px;
+    border-radius: 50px;
+    width: 400px;
+    height: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+#criar_dieta:hover, #ver_dieta:hover {
+    color: #649214;
+    transition-duration: 0.5s;
+    background-color: #fff;
+    border: #649214 solid 2px;
+    width: 410px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.75)
+}
+
+#criar_dieta {
+    float: left;
+    margin-left: 15%;
+}
+
+#ver_dieta {
+    float: right;
+    margin-right: 15%;
+}
+
+/* - */
+
+/* site do login */
+
+#butao {
+    background: #649214;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#form_login {
+    float: left;
+    margin-left: 25%; 
+}
+
+/* - */
+
+/* Tela de cadastro */
+
+#sexo {
+    margin-top: 10px;
+}
+
+input:not(#sexo) ,textarea { 
+    border-radius: 50px;
+    height: 35px;
+    width: 300px;
+    border: #649214 2px solid;
+    resize: none;
+    padding: 5px 10px 5px;
+    margin: auto;
+}
+
+/* - */
+
+/* site fale conosco */
+
+#Informações_Contato {
+    float: left;
+    margin: 2%;
+    margin-left: 20%;
+}
+
+#Form_Contato {
+    float: right;
+    margin: 2%;
+    margin-right: 20%;
+}
+
+/* - */
+
+/* Site dieta */
+
+select {
+    border-radius: 50px;
+    height: 50px;
+    width: 320px;
+    border: #649214 2px solid;
+    margin: auto;
+    padding: 5px 10px 5px;
+}
+
+/* - */
