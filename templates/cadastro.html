@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block section %}
+
+    <article>
+
+        <form method="POST" id="form_cadastro" action="../index.html"> 
+
+            <h1>CADASTRA-SE</h1>
+
+            <p>Para utilizar e criar sua dieta é necessário se cadastrar, preenchendo o formulário abaixo.</p>
+
+            <label for="cpf">CPF*</label> <br/>
+            <input id="cpf" type="text" class="input_cadastro" placeholder="Informe o número" onkeypress="formatar('###.###.###-##', this)" minlength="14" maxlength="14" required/> <br/><br/>
+
+            <label for="nome">Primeiro nome*</label> <br/>
+            <input id="nome" type="text" class="input_cadastro" placeholder="Digite aqui" required/> <br/><br/>
+
+            <label for="sobrenome">Sobrenome*</label> <br/>
+            <input id="sobrenome" type="text" class="input_cadastro" placeholder="Digite aqui" required/> <br/><br/>
+
+            <label for="data">Data de Nascimento (XX/XX/XXXX)*</label> <br/>
+            <input id="data" type="text" class="input_cadastro"  placeholder="__/__/____" onkeypress="formatar('##/##/####', this)" minlength="10" maxlength="10" required/> <br/><br/>
+        
+            <label for="sexo">Sexo*</label> <br/>
+            <input id="sexo" type="radio" class="input_cadastro" name="sexo" value="Masculino" required/> Masculino
+            <input id="sexo" type="radio" class="input_cadastro" name="sexo" value="Feminino" required/> Feminino
+            <input id="sexo" type="radio" class="input_cadastro" name="sexo" value="Outro" required/> Outro <br/><br/>
+
+            <label for="tel_cel">Telefone Celular*</label> <br/>
+            <input id="tel_cel" type="text" class="input_cadastro" placeholder="__ _____-____" onkeypress="formatar('## #####-####', this)" minlength="13" maxlength="13" required/> <br/><br/>
+
+            <label for="email">E-mail*</label> <br/>
+            <input id="email" type="email" class="input_cadastro" placeholder="Digite aqui required"/> <br/><br/>
+
+            <label for="con_email">Confirmação do E-mail*</label> <br/>
+            <input id="con_email" type="email" class="input_cadastro" placeholder="Digite aqui" required/> <br/><br/>
+
+            <label for="senha">Senha (6 dígitos numéricos)*</label> <br/>
+            <input id="senha" type="password" minlength="6" class="input_cadastro" placeholder="Senha" required/> <br/><br/>
+
+            <label for="con_senha">Confirmar Senha*</label> <br/>
+            <input id="con_senha" type="password" minlength="6" class="input_cadastro" placeholder="Senha" required/> <br/><br/>
+
+            <button id="butao">FINALIZAR</button>
+
+        </form>
+
+    </article>
+
+{% endblock section %}

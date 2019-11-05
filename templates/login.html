@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block section %}
+
+
+<article>
+
+        <h1>LOGIN</h1>
+
+        <p>Para utilizar e criar sua dieta é necessário fazer o login preenchendo o formulário abaixo, caso não tenha um login clique no botão verde escrito cadastrar.</p>
+
+        </br>
+
+        <form method="POST" id="form_login" action="_site/home.html">
+
+            <label for="nome">Primeiro nome*</label> <br/>
+            <input id="nome" type="text" placeholder="Digite aqui" required/> <br/><br/>
+
+            <label for="email">E-mail*</label> <br/>
+            <input id="email" type="email" placeholder="Digite aqui" required/> <br/><br/>
+
+            <label for="senha">Senha (6 dígitos numéricos)*</label> <br/>
+            <input id="senha" type="password" minlength="6" placeholder="Senha" required/> <br/><br/>
+    
+            <button id="butao">LOGAR</button>
+
+        </form>
+
+        <button id="butao" style="float: right; margin-right: 25%;" onclick="window.location.href='/cadastro'">CADASTRAR</button>
+
+    </article>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+{% endblock section %}
