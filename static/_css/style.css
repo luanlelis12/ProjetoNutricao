@@ -5,15 +5,16 @@ body {
 }
 
 @font-face {
-    font-family: Domine;
-    src: url('Domine-Regular.ttf');
+    font-family: Alvaro;
+    src: url('AlvaroFREE.ttf');
 }
 
 #nome_site {
     color: #fff;
     text-align: center;
     font-size: 78px;
-    font-family: Domine, Arial, Tahoma, Sans-serif;
+    font-family: Alvaro, Arial, Tahoma, Sans-serif;
+    letter-spacing: 20px;
     position: absolute;
     top: 40%;
     transform: translate(-50%, -50%);
@@ -146,7 +147,7 @@ footer {
 
 #titulo_dieta {
     text-shadow: rgba(126, 179, 35, 0.7) 2px -2px, rgba(126, 179, 35, 0.7) -2px 2px, rgba(126, 179, 35, 0.7) 2px 2px, rgba(126, 179, 35, 0.7) -2px -2px;
-    font-family: Domine, Arial, Tahoma, Sans-serif;
+    font-family: Alvaro, Arial, Tahoma, Sans-serif;
     letter-spacing: 20px;
     font-size: 75px;
     margin: 0px;
