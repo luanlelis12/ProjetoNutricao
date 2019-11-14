@@ -176,7 +176,7 @@ article {
 
 /* site do login */
 
-#butao {
+#botao {
     background: #649214;
     border: none;
     color: white;
@@ -184,11 +184,6 @@ article {
     width: 200px;
     margin-bottom: 10px;
     cursor: pointer;
-}
-
-#form_login {
-    float: left;
-    margin-left: 25%; 
 }
 
 /* - */
@@ -199,7 +194,7 @@ article {
     margin-top: 10px;
 }
 
-input:not(#sexo) ,textarea { 
+input:not(#botao) ,textarea { 
     border-radius: 50px;
     height: 35px;
     width: 300px;
