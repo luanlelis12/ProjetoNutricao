@@ -14,7 +14,6 @@ body {
     text-align: center;
     font-size: 78px;
     font-family: Alvaro, Arial, Tahoma, Sans-serif;
-    letter-spacing: 20px;
     position: absolute;
     top: 40%;
     transform: translate(-50%, -50%);
@@ -56,40 +55,29 @@ header {
     height: 65%;
 }
 
-nav {
+#nav {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-#links {
+#link {
+    text-decoration: none;
+    color: white;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
-    display: table;
+    left: 4.5%;
     text-align: center;
+    transition-duration: 0.3s;
 }
 
-.link {
-    text-decoration: none;
-    color: white;
-    padding-left: 10px; 
-    padding-right: 10px;
-}
-
-.linha_vertical {
-    width: 0px;
-    height: 10px;
-    background-color: #fff;
-}
-
-.link, .linha_vertical, #link_login {
-    display: table-cell;
-    vertical-align: middle;
+#link:hover {
+    color: rgba(126, 179, 35, 0.7);
+    transition-duration: 0.3s;
 }
 
 section {
@@ -123,24 +111,11 @@ article {
     left: 5%;
 }
 
-footer {
-    margin-top: 10px;
-    border-top: #649214 1px solid;
-    color: black;
-    background: #fff;
-}
-
-.p_footer {
-    float: left;
-    margin-left: 7%;
-}
-
 /* Home */ 
 
 #sobre {
     text-indent: 4em;
-    margin: 10px;
-    margin-right: 15px; 
+    margin: 50px; 
     line-height: 25px;
     text-align: justify;
 }
@@ -165,20 +140,25 @@ footer {
 #criar_dieta, #ver_dieta {
     border: #fff solid 2px;
     border-radius: 50px;
-    width: 400px;
-    height: 50px;
+    padding: 15px;
+    padding-left: 110px;
+    padding-right: 110px;
+    vertical-align: middle;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    transition-duration: 0.5s;
+    text-decoration: none;
 }
 
 #criar_dieta:hover, #ver_dieta:hover {
     color: #649214;
     transition-duration: 0.5s;
+    padding: 17.5px;
+    padding-left: 115px;
+    padding-right: 115px;
     background-color: #fff;
     border: #649214 solid 2px;
-    width: 410px;
-    height: 55px;
     background: rgba(255, 255, 255, 0.75)
 }
 
