@@ -7,7 +7,7 @@
 
         <meta charset="UTF-8"/>
 
-        <link rel="icon" href="_img/dieta.png" type="image/png"/>
+        <link rel="icon" href="{{url_for('static', filename='_img/dieta.png')}}" type="image/png"/>
 
         <link rel="stylesheet" href="{{url_for('static', filename='_css/style.css')}}" />
 
@@ -19,19 +19,13 @@
 
         <header>
 
-            <nav>
+            <div id="nav">
 
-                <div id="links">
-                    <a class="link" href="/fala">Fale Conosco</a>
-                    <hr class="linha_vertical"/>
-                    <a class="link" href="/login">Fazer Login</a>
-                    <hr class="linha_vertical"/>
-                    <a class="link" href="/doacao">Faça Doações</a>
-                </div>
+                <a id="link" href="/login">Fazer Login</a>
 
-            </nav>
+            </div>
     
-            <h1 id="nome_site">YOUR NUTRITION</h1>
+            <a href="/"><h1 id="nome_site">YOUR NUTRITION</h1></a>
             <p id="slogan_site">Your health in first place</p>
             
         </header>
@@ -40,14 +34,6 @@
 
             {% block section %}
             {% endblock section %}
-           
-            <footer>
-
-                    <p class="p_footer">Copyright © 2019 | Your Nutrition</p>
-                    <p class="p_footer">Cel: (TIM) +55 77 99847-6262 (VIVO) +55 77 99192-2620</p>
-                    <p class="p_footer">Your health in first place</p>
-        
-            </footer>
 
         </section>        
 

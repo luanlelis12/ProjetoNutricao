@@ -11,18 +11,17 @@
 
         </br>
 
-        <form method="POST" id="form_login" action="_site/home.html">
+        <form method="POST" id="form_login">
 
-            <label for="nome">Nome completo*</label> <br/>
-            <input id="nome" type="text" placeholder="Digite aqui" required/> <br/><br/>
+            {{ form.hidden_tag() }}
 
-            <label for="email">E-mail*</label> <br/>
-            <input id="email" type="email" placeholder="Digite aqui" required/> <br/><br/>
+            {{form.nome.label}} <br/> {{form.nome}} <br/>
 
-            <label for="senha">Senha (6 dígitos numéricos)*</label> <br/>
-            <input id="senha" type="password" minlength="6" placeholder="Senha" required/> <br/><br/>
-    
-            <button id="butao">LOGAR</button>
+            {{form.email.label}} <br/> {{form.email}} <br/>
+
+            {{form.senha.label}} <br/> {{form.senha}} <br/>
+
+            <br/> {{form.botao}}
 
         </form>
 
