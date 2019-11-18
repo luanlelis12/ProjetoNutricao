@@ -2,31 +2,30 @@
 
 {% block section %}
 
+<article id="div_login">
 
-<article>
+    <h1 id="h1_login">LOGIN</h1>
 
-        <h1>LOGIN</h1>
+    <p>Para utilizar e criar sua dieta é necessário fazer o login preenchendo o formulário abaixo, caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
 
-        <p>Para utilizar e criar sua dieta é necessário fazer o login preenchendo o formulário abaixo, caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
+    </br>
 
-        </br>
+    <form method="POST" id="form_login" onsubmit="login()">
 
-        <form method="POST" id="form_login">
+        {{ form.hidden_tag() }}
 
-            {{ form.hidden_tag() }}
+        {{form.nome.label}} <br/> {{form.nome}} <br/><br/>
 
-            {{form.nome.label}} <br/> {{form.nome}} <br/>
+        {{form.email.label}} <br/> {{form.email}} <br/><br/>
 
-            {{form.email.label}} <br/> {{form.email}} <br/>
+        {{form.senha.label}} <br/> {{form.senha}} <br/><br/>
 
-            {{form.senha.label}} <br/> {{form.senha}} <br/>
+        <br/> {{form.botao}}
 
-            <br/> {{form.botao}}
+    </form>
 
-        </form>
+    <br/><br/><br/><br/>
 
-        <br/><br/><br/><br/>
-
-    </article>
+</article>
 
 {% endblock section %}

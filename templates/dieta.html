@@ -4,34 +4,18 @@
 
 <article>
 
-    <form>
+    <form method="POST">
 
-        <label for="peso">Massa Corporal</label> <br/>
-        <input type="number" id="peso"></br></br>
-                
-        <label for="idade">Idade</label> <br/>
-        <input type="number" id="idade"></br></br>
-    
-        <label for="altura">Altura</label> <br/>
-        <input type="number" id="altura"></br></br>
-    
-        <label for="doenca">Doença</label> <br/>
-        <select id="doenca">
-            <option value="diabetes">Diabetes</option>
-            <option value="cancer">Câncer</option>
-            <option value="alta_pressao">Hipertesão</option>
-            <option value="nenhuma">Nenhuma</option>
-        </select></br></br>
-    
-        <label for="objetivo">Objetivo</label> <br/>
-        <select id="objetivo">
-            <option value="musculo">Massa muscular</option>
-            <option value="magro">Emagrecer</option>
-            <option value="normal">Engordar</option>
-        </select></br></br>
-    
-        <button id="butao" onclick="tabela()">Enviar</button>
-            
+        {{ form.hidden_tag() }}
+
+        {{form.peso.label}} <br/> {{form.peso}} <br/>
+
+        {{form.altura.label}} <br/> {{form.altura}} <br/>
+
+        {{form.objetivo.label}} <br/> {{form.objetivo}} <br/>
+
+        <br/> {{form.botao}}
+
     </form>
 
 </article>

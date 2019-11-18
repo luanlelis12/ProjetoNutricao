@@ -2,9 +2,11 @@
 
 {% block section %}
 
-<article>
+<article id="div_sobre">
 
-    <h1>Sobre</h1>
+    <br/>
+
+    <h1 id="h1_sobre">Sobre</h1>
 
     <p id="sobre">A nutrição representa o fator de influência mais importante no corpo humano, dado o fato que a ingestão
     de nutrientes e quaisquer outros elementos externos é devido a esta. Pensando nisso, o site "your nutrition"
@@ -13,25 +15,24 @@
     relevantes, e uma página para aqueles que gostariam de saber sua dieta ideal, tanto para se manter em forma,
     quanto para se manter saudável e de acordo com a opinião dos nutricionistas brasileiros. Portanto será 
     criada também uma página com uma espécie de "calculadora", na qual o indivíduo insere dados relacionados à
-    estatura, peso, entre outros e o algoritmo fornece a alimentação recomendada para o mesmo em um cronograma
-    semanal.</p>
+    estatura, peso, entre outros e o algoritmo fornece a alimentação recomendada para o mesmo.</p>
 
 </article>
 
-<br/><br/>
-
 <article id="article_dieta"><div id="conteudo_dieta">
 
-    <br/>
+        <br/><br/><br/>
+    
+        <h1 id="titulo_dieta">Sua Dieta</h1> <br/>
+    
+        <img id="logo_dieta" src="{{url_for('static', filename='_img/dieta.png')}}"/> <br/><br/><br/><br/><br/><br/>
+                
+        <a href="/dieta" id="criar_dieta">Criar Dieta</a> <br/><br/><br/><br/><br/><br/>
+    
+        <a href="" id="ver_dieta">Acessar Dieta</a>
+    
+</div></article>   
 
-    <h1 id="titulo_dieta">Sua Dieta</h1> <br/>
-
-    <img id="logo_dieta" src="{{url_for('static', filename='_img/dieta.png')}}"/> <br/><br/>
-            
-    <a href="/dieta" id="criar_dieta">Criar Dieta</a>
-
-    <a href="" id="ver_dieta">Acessar Dieta</a>
-
-</div></article>
+<br/><br/>
 
 {% endblock section %}

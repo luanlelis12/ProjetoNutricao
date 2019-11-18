@@ -20,22 +20,26 @@
         <header>
 
             <div id="nav">
-
-                <a id="link" href="/login">Fazer Login</a>
-
+                <a href="/" ><span id="nome_site"><strong>YOUR</strong>NUTRITION<span id="ponto">.</span></span></a><br/>
+                <a id="link" href="/login">{{ user_logado }}</a>
             </div>
-    
-            <a href="/"><h1 id="nome_site">YOUR NUTRITION</h1></a>
-            <p id="slogan_site">Your health in first place</p>
+            
+            <div id="slogan">
+                <span id="slogan_site">Uma simples<br/>dieta para sua<br/>saúde.</span>
+                <hr id="hr_slogan"/>
+            </div>
             
         </header>
 
+        {% block dieta %}
+        {% endblock dieta %}   
+        
         <section>
 
             {% block section %}
             {% endblock section %}
 
-        </section>        
+        </section>
 
     </body>
 
