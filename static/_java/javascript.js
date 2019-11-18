@@ -1,6 +1,6 @@
 window.onscroll = function(){
 
-    if (window.scrollY >= "350") {
+    if (window.scrollY >= "250") {
         document.getElementById('conteudo_dieta').style.opacity = 1;
         document.getElementById('conteudo_dieta').style.left = 0;
     }
@@ -11,16 +11,13 @@ window.onscroll = function(){
 
 }
 
-function tabela(){
+function cadastro(){
 
-    var peso = document.getElementById("peso").value;
-    var idade = document.getElementById("idade").value;
-    var altura = document.getElementById("altura").value;
-    var doenca = document.getElementById("doenca").value;
-    var objetivo = document.getElementById("objetivo").value;
+    confirmar = document.getElementById('confirmar').value;
+    senha = document.getElementById('senha').value;
 
-    var msg = peso + idade + altura + doenca + objetivo;
-    
-    alert(msg);
+    if (senha != confirmar){
+        alert('Senha diferentes. Tente usar senhas iguais');
+    }
 
 }
