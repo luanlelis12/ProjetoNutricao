@@ -17,7 +17,7 @@ class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(60), nullable=False)
-    senha = db.Column(db.String(20), unique=True, nullable=False)
+    senha = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(60), unique=True, nullable=False)
     sexo = db.Column(db.String(1), nullable=False)
     aniversario = db.Column(db.Date, nullable=False)
@@ -43,6 +43,7 @@ def user_logado_context():
 
 
 @app.route('/')
+@app.route('/home')
 @app.route('/index')
 def index():
     return render_template('index.html')
@@ -73,7 +74,6 @@ def dieta():
         yNiver = dNiver.year
         yNow = now.year
         idade = yNow-yNiver
-        print(idade)
         Proteinas = 2.5*peso
         Gordura = 1*peso
         Carboidratos = 0
@@ -98,12 +98,12 @@ def login():
 
     if form.validate_on_submit():
            
-        user = User.query.filter_by(nome=form.nome.data).first()
+        user = User.query.filter_by(email=form.email.data).first()
 
         if user:
-            if user.senha == form.senha.data and user.email == form.email.data:
+            if user.email == form.email.data:
                 global user_logado
-                user_logado = form.nome.data
+                user_logado = user.nome
                 return redirect(url_for('index'))
             else:
                 return 'osdjajdksa'
