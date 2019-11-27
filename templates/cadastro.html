@@ -1,33 +1,44 @@
 {% extends 'base.html' %}
 
+{% block titulo %}Cadastro{% endblock titulo %}
+
 {% block section %}
 
-    <article>
+<article class="article_text">
+    
+    <h1 id="h1_cadastro">CADASTRA-SE</h1>
 
-        <form method="POST" id="form_cadastro" onsubmit="cadastro()"> 
+    <p id="text_cadastro">Para utilizar e criar sua dieta é necessário criar uma conta no website, para se cadastrar é só preencer todos os campos no formulário ao lado.</p>
 
-            {{ form.hidden_tag() }}
+</article>
 
-            <h1>CADASTRA-SE</h1>
+<article id="article_cadastro"><div id="conteudo_article">
 
-            <p>Para utilizar e criar sua dieta é necessário se cadastrar, preenchendo o formulário abaixo.</p>
+    <img id="logo_cadastro" src="{{url_for('static', filename='_img/cadastro.png')}}"/>
 
-            {{form.nome.label}} <br/> {{form.nome}} <br/>
 
-            {{form.sexo.label}} <br/> {{form.sexo}} <br/>
+    <form method="POST" id="form_cadastro" onsubmit="cadastro()"> 
 
-            {{form.aniversario.label}} <br/> {{form.aniversario(type='date')}} <br/>
+        {{ form.hidden_tag() }}
+    
+        {{form.nome(placeholder="Nome", class_="input_cadastro input_cadastro_nome")}}
 
-            {{form.email.label}} <br/> {{form.email}} <br/>
+        {{form.sexo(class_="input_cadastro_sexo")}}
+    
+        {{form.aniversario(class_="input_cadastro input_cadastro_aniversario", type='date')}}
+    
+        {{form.email(placeholder="Email", class_="input_cadastro input_cadastro_email")}}
+   
+        {{form.senha(placeholder="Senha", class_="input_cadastro input_cadastro_senha")}}
+   
+        {{form.confirmar(placeholder="Confirmar", class_="input_cadastro input_cadastro_confirmar")}}
+   
+        {{form.botao(class_="btn btn_cadastro")}}
 
-            {{form.senha.label}} <br/> {{form.senha}} <br/>
+    </form>
 
-            {{form.confirmar.label}} <br/> {{form.confirmar}} <br/>
+</div></article>
 
-            <br/> {{form.botao}}
-
-        </form>
-
-    </article>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 {% endblock section %}

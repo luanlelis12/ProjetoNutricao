@@ -1,31 +1,39 @@
 {% extends 'base.html' %}
 
+{% block titulo %}Login{% endblock titulo %}
+
 {% block section %}
 
-<article id="div_login">
+<article class="article_text">
 
     <h1 id="h1_login">LOGIN</h1>
 
-    <p>Para utilizar e criar sua dieta é necessário fazer o login preenchendo o formulário abaixo, caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
+    <p id="text_login">Para utilizar e/ou criar sua dieta é necessário fazer o login preenchendo todas os campos do formulário na caixa ao lado. Caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
 
     </br>
+
+</article>
+
+<article id="article_login"><div id="conteudo_article">
+
+    <br/><br/><br/>
+
+    <img id="logo_login" src="{{url_for('static', filename='_img/login.png')}}"/> <br/><br/><br/><br/>
 
     <form method="POST" id="form_login" onsubmit="login()">
 
         {{ form.hidden_tag() }}
-
-        {{form.nome.label}} <br/> {{form.nome}} <br/><br/>
-
-        {{form.email.label}} <br/> {{form.email}} <br/><br/>
-
-        {{form.senha.label}} <br/> {{form.senha}} <br/><br/>
-
-        <br/> {{form.botao}}
-
+    
+        <div> {{form.email(placeholder="Email", class_="input_login input_login1")}} </div>
+    
+        <div> {{form.senha(placeholder="Senha", class_="input_login input_login2")}} </div>
+    
+        {{form.botao(class_="btn btn_login")}}
+    
     </form>
 
-    <br/><br/><br/><br/>
+</div></article>
 
-</article>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 {% endblock section %}
