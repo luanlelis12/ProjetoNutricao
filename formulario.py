@@ -12,7 +12,6 @@ class CadastroForm(FlaskForm):
     botao = SubmitField('FINALIZAR')
 
 class LoginForm(FlaskForm):
-    nome = StringField('Nome completo', validators=[DataRequired()])
     email = StringField('E-mail', validators=[DataRequired()])
     senha = PasswordField('Senha (6 dígitos numéricos)', validators=[DataRequired()])
     botao = SubmitField('LOGAR')
