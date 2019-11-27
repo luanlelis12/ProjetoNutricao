@@ -1,14 +1,13 @@
 window.onscroll = function(){
 
     if (window.scrollY >= "250") {
-        document.getElementById('conteudo_dieta').style.opacity = 1;
-        document.getElementById('conteudo_dieta').style.left = 0;
+        document.getElementById("conteudo_article").style.opacity = 1;
+        document.getElementById("conteudo_article").style.left = 0;
     }
     else{
-        document.getElementById('conteudo_dieta').style.opacity = 0;
-        document.getElementById('conteudo_dieta').style.left = "5%";
+        document.getElementById("conteudo_article").style.opacity = 0;
+        document.getElementById("conteudo_article").style.left = "5%";
     }
-
 }
 
 function cadastro(){
