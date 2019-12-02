@@ -10,11 +10,51 @@
     src: url('WorkSans-Regular.ttf');
 }
 
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url('Nunito-Regular.ttf');
+}
+
 /* css do body */
 
 body {
     font-family: sans-serif;
     overflow-x: hidden;
+}
+
+/* css do input */
+
+input {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/* css dos botões */
+
+.btn {
+    border: none;
+    margin: 10px;
+    padding: 24px;
+    width: 220px;
+    font-size: 16px;
+    font-family: WorkSans-Regular;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 200%;
+    transition: 0.6s;
+    background-image: linear-gradient(to left,#7de538,#00802b,#7de538);
+}
+
+.btn:hover {
+    background-position: right;
+    width: 230px;
 }
 
 /* css do header/nav */
@@ -95,6 +135,61 @@ header {
     background: #649214;
 }
 
+.container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+}
+  
+.container span{
+    text-transform: uppercase;
+    display: block;
+}
+  
+.text1{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text1 3s 1;
+    border-bottom: 3px solid #fff;
+}
+  
+.text2{
+    font-size: 30px;
+    color: #7eb323;
+    animation: text2 3s 1;
+}
+  
+@keyframes text1 {
+    0%{
+      opacity: 0;
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 25px;
+      margin-bottom: -40px;
+    }
+    85%{
+      letter-spacing: 8px;
+      margin-bottom: -40px;
+    }
+} 
+
+@keyframes text2 {
+    0%{
+      opacity: 0;
+    }
+    85%{
+      opacity: 0;
+    }
+}
+
 /* css dos sections/articles */
 
 section {
@@ -116,29 +211,33 @@ article {
     margin-left: 2.5%;
 }
 
-/* css do sobre */
+/* css do article_text */
 
-#h1_sobre {
-    text-align: left;
-    margin-left: 50px;
-    font-size: 2rem;
-    font-weight: 900;
-    font-family: WorkSans-Bold;
-    border-left: 7px #649214 solid;
-    padding-left: 10px;
+.conteudo_article {
+    margin: 50px;
 }
 
-#text_sobre {
+.h1_conteudo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Poppins-Regular;
+    border-bottom: 3px #649214 solid;
+    padding-bottom: 10px;
+    letter-spacing: 7.5px;
+}
+
+.text_conteudo {
+    color: #444;
+    font-family: Nunito-Regular;
+    font-size: 18px;
     text-indent: 4em;
-    margin: 50px; 
     line-height: 25px;
 }
 
-/* css da article_dieta/etc */
+/* css do article */
 
-#article_dieta {
+#article {
     border: #fff 3px solid;
-    border-radius: 15px;
     position: absolute;
     top: -10%;
     right: 7.5%;
@@ -149,7 +248,7 @@ article {
     width: 41.5%;
     color: #fff;
     height: 600px;
-    box-shadow: -4px 4px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 3px 19px -9px rgba(0,0,0,.75);
 }
 
 #conteudo_article {
@@ -161,6 +260,8 @@ article {
     height: 600px;
 }
 
+/* css da article_dieta/etc */
+
 #titulo_dieta {
     text-shadow: #7eb323 2px -2px, #7eb323 -2px 2px, #7eb323 2px 2px, #7eb323 -2px -2px;
     font-family: WorkSans-Bold;
@@ -170,7 +271,10 @@ article {
 }
 
 #logo_dieta {
-    position: sticky;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
     border-radius: 50%;
     border: #000 3px solid;
     padding: 20px;
@@ -178,66 +282,27 @@ article {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-#criar_dieta, #ver_dieta {
-    padding: 17.5px;
-    border: #fff solid 2px;
-    border-radius: 50px;
-    vertical-align: middle;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition-duration: 0.5s;
-    text-decoration: none;
+.btn_home {
+    width: 350px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
-#criar_dieta {
-    padding-left: 110px;
-    padding-right: 110px;
+.btn_home:hover {
+    background-position: right;
+    width: 380px;
 }
 
-#ver_dieta {
-    padding-left: 99.5px;
-    padding-right: 99.5px;
+.btn_criar {
+    top: 60%;
 }
 
-#criar_dieta:hover, #ver_dieta:hover {
-    color: #649214;
-    transition-duration: 0.5s;
-    background-color: #fff;
-    border: #649214 solid 2px;
-    background: rgba(255, 255, 255, 0.75)
-}
-
-#criar_dieta:hover {
-    padding: 20px;
-    padding-left: 128px;
-    padding-right: 128px;   
-}
-
-#ver_dieta:hover {
-    padding: 20px;
-    padding-left: 117.5px;
-    padding-right: 117.5px;    
+.btn_acessar {
+    top: 80%;
 }
 
 /* css do form/site de login */
-
-#article_login {
-    border: #fff 3px solid;
-    border-radius: 15px;
-    position: absolute;
-    top: -10%;
-    right: 7.5%;
-    background-color: #fff;
-    background-image: url("../_img/nutricao.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 41.5%;
-    color: #fff;
-    height: 600px;
-    box-shadow: -4px 4px 4px rgba(0,0,0,0.5);
-}
 
 #h1_login {
     text-align: left;
@@ -315,23 +380,6 @@ article {
 }
 
 /* css do form/site de cadastro */
-
-#article_cadastro {
-    border: #fff 3px solid;
-    border-radius: 15px;
-    position: absolute;
-    top: -10%;
-    right: 7.5%;
-    background-color: #fff;
-    background-image: url("../_img/nutricao.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 41.5%;
-    color: #fff;
-    height: 600px;
-    box-shadow: -4px 4px 4px rgba(0,0,0,0.5);
-}
 
 #h1_cadastro {
     text-align: left;
@@ -419,8 +467,6 @@ select {
     padding: 20px;
     padding-left: 70px;
     padding-right: 70px;
-    box-shadow: 0 0 0 0;
-    outline: 0;
 }
 
 .input_cadastro:valid {
@@ -459,27 +505,4 @@ select {
 
 .btn_cadastro {
     top: 87.5%;
-}
-
-/* css dos botões */
-
-.btn {
-    border: none;
-    margin: 10px;
-    padding: 24px;
-    width: 220px;
-    font-size: 16px;
-    font-family: WorkSans-Regular;
-    text-transform: uppercase;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    background-size: 200%;
-    transition: 0.6s;
-    background-image: linear-gradient(to left,#7de538,#00802b,#7de538);
-}
-
-.btn:hover {
-    background-position: right;
-    width: 230px;
 }
