@@ -18,17 +18,21 @@
     <body>      
 
         <header>
-
+        
             <div id="nav">
                 <a href="/" ><span id="nome_site"><strong>YOUR</strong>NUTRITION<span id="ponto">.</span></span></a><br/>
                 <a id="link" href="/login">{{ user_logado }}</a>
             </div>
-            
-            <div id="slogan">
-                <span id="slogan_site">Uma simples<br/>dieta para sua<br/>saúde.</span>
-                <hr id="hr_slogan"/>
+
+            <div id='titulo_site'>
+                {% block header %}
+                <div id="slogan">
+                    <span id="slogan_site">Uma simples<br/>dieta para sua<br/>saúde.</span>
+                    <hr id="hr_slogan"/>
+                </div>
+                {% endblock header %}
             </div>
-            
+        
         </header>
 
         {% block dieta %}

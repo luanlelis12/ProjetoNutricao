@@ -2,39 +2,52 @@
 
 {% block titulo %}Home{% endblock titulo %}
 
+{% block header %}
+
+<div class="container">
+    <span class="text1">welcome in</span>
+    <span class="text2">yournutrition</span>
+</div>
+
+{% endblock header %}
+
 {% block section %}
 
-<article id="article_sobre" class="article_text">
+<article class="article_text">
 
-    <br/>
+    <div class="conteudo_article">
 
-    <h1 id="h1_sobre">Sobre</h1>
+        <h1 class="h1_conteudo">Sobre</h1>
 
-    <p id="text_sobre">A nutrição representa o fator de influência mais importante no corpo humano, dado o fato que a ingestão
-    de nutrientes e quaisquer outros elementos externos é devido a esta. Pensando nisso, o site "your nutrition"
-    foi criado, para pessoas de qualquer idade ou condição social, a fim de ajuda-las a realizar uma melhora
-    efetiva em sua alimentação. Para isso, serão disponibilizados recursos, tais como informações nutricionais
-    relevantes, e uma página para aqueles que gostariam de saber sua dieta ideal, tanto para se manter em forma,
-    quanto para se manter saudável e de acordo com a opinião dos nutricionistas brasileiros. Portanto será 
-    criada também uma página com uma espécie de "calculadora", na qual o indivíduo insere dados relacionados à
-    estatura, peso, entre outros e o algoritmo fornece a alimentação recomendada para o mesmo.</p>
+        <p class="text_conteudo">A nutrição representa o fator de influência mais importante no corpo humano, dado o fato que a ingestão
+        de nutrientes e quaisquer outros elementos externos é devido a esta. Pensando nisso, o site "your nutrition"
+        foi criado, para pessoas de qualquer idade ou condição social, a fim de ajuda-las a realizar uma melhora
+        efetiva em sua alimentação.</p>
+        
+        <p class="text_conteudo">Para isso, serão disponibilizados recursos, tais como informações nutricionais
+        relevantes, e uma página para aqueles que gostariam de saber sua dieta ideal, tanto para se manter em forma,
+        quanto para se manter saudável e de acordo com a opinião dos nutricionistas brasileiros. Portanto será 
+        criada também uma página com uma espécie de "calculadora", na qual o indivíduo insere dados relacionados à
+        estatura, peso, entre outros e o algoritmo fornece a alimentação recomendada para o mesmo.</p>
+
+    </div>
 
 </article>
 
-<article id="article_dieta"><div id="conteudo_article">
+<article id="article"><div id="conteudo_article">
 
-    <br/><br/><br/>
+    <br/>
 
-    <h1 id="titulo_dieta">Sua Dieta</h1> <br/>
+    <h1 id="titulo_dieta">Sua Dieta</h1> <br/><br/>
 
     <img id="logo_dieta" src="{{url_for('static', filename='_img/dieta.png')}}"/> <br/><br/><br/><br/><br/><br/>
             
-    <a href="/dieta" id="criar_dieta">Criar Dieta</a> <br/><br/><br/><br/><br/><br/>
+    <input class="btn btn_home btn_criar" type="submit" value="criar dieta">
 
-    <a href="" id="ver_dieta">Acessar Dieta</a>
+    <input class="btn btn_home btn_acessar" type="submit" value="acessar dieta">
 
 </div></article>
 
-<br/><br/><br/>
+<br/>
 
 {% endblock section %}

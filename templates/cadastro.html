@@ -5,17 +5,21 @@
 {% block section %}
 
 <article class="article_text">
-    
-    <h1 id="h1_cadastro">CADASTRA-SE</h1>
 
-    <p id="text_cadastro">Para utilizar e criar sua dieta é necessário criar uma conta no website, para se cadastrar é só preencer todos os campos no formulário ao lado.</p>
+    <div class="conteudo_article">
+    
+        <h1 class="h1_conteudo">CADASTRA-SE</h1>
+
+        <p class="text_conteudo">Para utilizar e criar sua dieta é necessário criar uma conta no website, para se cadastrar 
+        é só preencer todos os campos no formulário ao lado.</p>
+
+    </div>
 
 </article>
 
-<article id="article_cadastro"><div id="conteudo_article">
-
+<article id="article"><div id="conteudo_article">
+    
     <img id="logo_cadastro" src="{{url_for('static', filename='_img/cadastro.png')}}"/>
-
 
     <form method="POST" id="form_cadastro" onsubmit="cadastro()"> 
 
@@ -39,6 +43,6 @@
 
 </div></article>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 {% endblock section %}

@@ -6,15 +6,20 @@
 
 <article class="article_text">
 
-    <h1 id="h1_login">LOGIN</h1>
+    <div class="conteudo_article">
 
-    <p id="text_login">Para utilizar e/ou criar sua dieta é necessário fazer o login preenchendo todas os campos do formulário na caixa ao lado. Caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
+        <h1 class="h1_conteudo">Login</h1>
 
-    </br>
+        <p class="text_conteudo">Para utilizar e/ou criar sua dieta é necessário fazer o login preenchendo todas os campos do 
+        formulário na caixa ao lado. Caso não tenha um login clique <a href="/cadastro">aqui</a> para cadastrar.</p>
+
+        </br>
+
+    </div>
 
 </article>
 
-<article id="article_login"><div id="conteudo_article">
+<article id="article"><div id="conteudo_article">
 
     <br/><br/><br/>
 
@@ -24,9 +29,9 @@
 
         {{ form.hidden_tag() }}
     
-        <div> {{form.email(placeholder="Email", class_="input_login input_login1")}} </div>
+        {{form.email(placeholder="Email", class_="input_login input_login1")}}
     
-        <div> {{form.senha(placeholder="Senha", class_="input_login input_login2")}} </div>
+        {{form.senha(placeholder="Senha", class_="input_login input_login2")}}
     
         {{form.botao(class_="btn btn_login")}}
     
@@ -34,6 +39,6 @@
 
 </div></article>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 {% endblock section %}
